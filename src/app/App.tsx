@@ -1,11 +1,14 @@
+import ListPage from '../features/product-list/pages/ListPage';
 import './App.css'
+import { createBrowserRouter } from 'react-router-dom';
 
-function App() {
-  return (
-    <>
-
-    </>
-  )
-}
-
-export default App
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <ListPage />,
+  },
+  // {
+  //   path: "/detail/:id",
+  //   element: <ProductDetailPage />,
+  // },
+]);
