@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "id": "gopay",
+            "nama": "GoPay",
+            "iconUrl": "src/assets/react.svg"
+        },
+        {
+            "id": "ovo",
+            "nama": "OVO",
+            "iconUrl": "src/assets/react.svg"
+        },
+        {
+            "id": "dana",
+            "nama": "DANA",
+            "iconUrl": "src/assets/react.svg"
+        },
+        {
+            "id": "cc",
+            "nama": "Kartu Kredit",
+            "iconUrl": "src/assets/react.svg"
+        }
+    ]
+}
