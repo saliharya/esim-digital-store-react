@@ -1,11 +1,14 @@
 import Header from "@/components/product/Header";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, CheckIcon, ClipboardIcon } from "lucide-react";
+import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export default function InvoicePage() {
     const navigate = useNavigate();
     const { state } = useLocation();
+
+    const [copied, setCopied] = useState(false);
 
     const {
         product,
@@ -19,12 +22,19 @@ export default function InvoicePage() {
         transactionFee = 2500,
     } = state || {};
 
+    const handleCopy = () => {
+        navigator.clipboard.writeText(invoiceNumber);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+    };
+
     if (!product) {
         return <div className="p-4">Produk tidak ditemukan</div>;
     }
 
-    // Generate nomor invoice random
-    const invoiceNumber = `INV-${Math.floor(100000 + Math.random() * 900000)}`;
+    const invoiceNumber = `INV-${Math.floor(Math.random() * 1e15)
+        .toString()
+        .padStart(15, "0")}`;
 
     const total = price + transactionFee;
 
@@ -50,7 +60,20 @@ export default function InvoicePage() {
                             <h1 className="text-2xl font-bold text-primary">
                                 Rp{total.toLocaleString("id-ID")}
                             </h1>
-                            <p className="text-sm text-gray-500">{invoiceNumber}</p>
+                            <div className="flex items-center justify-center gap-2 w-full">
+                                <p className="text-sm text-gray-500">{invoiceNumber}</p>
+                                <button
+                                    onClick={handleCopy}
+                                    className="p-1 rounded-md hover:bg-gray-200"
+                                    title="Copy invoice"
+                                >
+                                    {copied ? (
+                                        <CheckIcon className="w-4 h-4 text-green-500" />
+                                    ) : (
+                                        <ClipboardIcon className="w-4 h-4 text-gray-500" />
+                                    )}
+                                </button>
+                            </div>
                         </div>
 
                         <div className="mt-6 border-t pt-4 space-y-2 text-sm">
