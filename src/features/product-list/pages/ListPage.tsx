@@ -98,24 +98,26 @@ export default function ListPage() {
                     <Header title="Travel eSIM" />
                 </div>
 
-                <div className="pt-4">
-                    <SearchBar />
-                </div>
+                <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-4">
+                    <div className="flex-1">
+                        <SearchBar />
+                    </div>
 
-                <div className="flex justify-between gap-2">
-                    <BottomSheetSelect
-                        label="Semua Region"
-                        options={["Asia", "Eropa", "Oseania", "Amerika", "Afrika"]}
-                        value={region}
-                        onChange={setRegion}
-                    />
+                    <div className="flex justify-between gap-2">
+                        <BottomSheetSelect
+                            label="Semua Region"
+                            options={["Asia", "Eropa", "Oseania", "Amerika", "Afrika"]}
+                            value={region}
+                            onChange={setRegion}
+                        />
 
-                    <BottomSheetSelect
-                        label="Semua Jenis"
-                        options={["Instant", "Topupable"]}
-                        value={jenis}
-                        onChange={setJenis}
-                    />
+                        <BottomSheetSelect
+                            label="Semua Jenis"
+                            options={["Instant", "Topupable"]}
+                            value={jenis}
+                            onChange={setJenis}
+                        />
+                    </div>
                 </div>
             </div>
 
@@ -125,7 +127,10 @@ export default function ListPage() {
                         No data available
                     </div>
                 ) : (
-                    <div className="grid grid-cols-2 gap-2 py-4">
+                    <div className="grid grid-cols-2 gap-3 py-4 
+                sm:grid-cols-2 
+                md:grid-cols-3 md:gap-4 
+                lg:grid-cols-4 lg:gap-6">
                         {filteredProducts.map((p) => (
                             <Link key={p.id} to={`/products/${p.id}`}>
                                 <ItemCard
@@ -140,7 +145,6 @@ export default function ListPage() {
                     </div>
                 )}
             </ScrollArea>
-
         </div>
     );
 }

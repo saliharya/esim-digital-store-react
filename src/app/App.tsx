@@ -5,7 +5,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import DetailPage from '@/features/product-list/pages/DetailPage';
 import OrderDetailPage from '@/features/order/pages/OrderDetailPage';
 import PaymentMethodPage from '@/features/order/pages/PaymentMethodPage';
-import InvoicePage from '@/components/order/InvoicePage';
+import InvoicePage from '@/features/order/pages/InvoicePage';
 
 export const router = createBrowserRouter([
   {
