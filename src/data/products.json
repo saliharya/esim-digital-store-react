@@ -276,7 +276,7 @@
         "id": 12,
         "name": "eSIM France",
         "images": [
-            "https://picsum.photos/id/1030/600/400"
+            "https://picsum.photos/id/1020/600/400"
         ],
         "region": "Eropa",
         "category": "Instant",
@@ -372,7 +372,7 @@
         "id": 16,
         "name": "eSIM Brazil",
         "images": [
-            "https://picsum.photos/id/1034/600/400"
+            "https://picsum.photos/id/1020/600/400"
         ],
         "region": "Amerika",
         "category": "Instant",
@@ -660,7 +660,7 @@
         "id": 28,
         "name": "eSIM UAE",
         "images": [
-            "https://picsum.photos/id/1046/600/400"
+            "https://picsum.photos/id/1020/600/400"
         ],
         "region": "Timur Tengah",
         "category": "Instant",
