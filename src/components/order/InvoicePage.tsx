@@ -1,12 +1,21 @@
 import Header from "@/components/product/Header";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { CheckCircle2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function InvoicePage() {
+
+    const navigate = useNavigate();
+
     return (
         <div className="flex flex-col h-screen bg-primary">
             <div className="pt-8 text-white px-4">
-                <Header />
+                <Header
+                    title="Invoice"
+                    showStepper={true}
+                    steps={["Checkout", "Invoice"]}
+                    currentStep={3}
+                />
             </div>
 
             <div className="fixed bottom-0 left-0 right-0 bg-white rounded-t-4xl h-[90vh] flex flex-col">
@@ -92,7 +101,10 @@ export default function InvoicePage() {
                             </div>
                         </div>
                         <div className="px-4 py-3 border-t">
-                            <button className="w-full bg-blue-800 text-white py-3 rounded-full font-semibold my-4">
+                            <button
+                                onClick={() => navigate("/")}   // <-- navigasi ke root
+                                className="w-full bg-blue-800 text-white py-3 rounded-full font-semibold my-4"
+                            >
                                 Selesai
                             </button>
                         </div>

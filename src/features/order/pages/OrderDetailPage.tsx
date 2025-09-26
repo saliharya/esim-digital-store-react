@@ -33,7 +33,7 @@ export default function OrderDetailPage() {
                     title="Detail Pemesanan"
                     showStepper={true}
                     steps={["Checkout", "Invoice"]}
-                    currentStep={1}
+                    currentStep={0}
                 />
             </div>
 
