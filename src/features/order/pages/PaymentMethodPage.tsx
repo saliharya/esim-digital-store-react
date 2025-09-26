@@ -1,20 +1,23 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Header from "@/components/product/Header";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import PaymentMethods from "@/components/order/PaymentMethods";
-import { getProductById } from "@/services/product/productService";
 
 type PaymentMethod = "saldo" | "bca" | "mandiri" | "bri";
 
 export default function PaymentMethodPage() {
     const navigate = useNavigate();
-    const { id } = useParams();
-    const product = getProductById(Number(id));
 
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [whatsapp, setWhatsapp] = useState("");
+    const { state } = useLocation();
+    const {
+        product,
+        selectedSize,
+        selectedDay,
+        name,
+        email,
+        whatsapp,
+    } = state || {};
 
     const [paymentMethod, setPaymentMethod] =
         useState<PaymentMethod>("saldo");
@@ -27,8 +30,8 @@ export default function PaymentMethodPage() {
         navigate(`/checkout/${product.id}/invoice`, {
             state: {
                 product,
-                selectedSize: product.dataSizes[0],
-                selectedDay: product.days[0],
+                selectedSize,
+                selectedDay,
                 name,
                 email,
                 whatsapp,
@@ -49,7 +52,6 @@ export default function PaymentMethodPage() {
             </div>
 
             <div className="fixed bottom-0 left-0 right-0 bg-white rounded-t-4xl h-[90vh] flex flex-col">
-                {/* Scrollable content */}
                 <ScrollArea className="flex-1 px-4 py-6 text-gray-600">
                     <div>
                         <h2 className="font-bold text-lg mb-2 text-black">

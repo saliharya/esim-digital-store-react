@@ -106,7 +106,20 @@ export default function OrderDetailPage() {
                 </ScrollArea>
 
                 <div className="px-4 py-3 border-t">
-                    <button className="w-full bg-blue-800 text-white py-3 rounded-full font-semibold my-4" onClick={() => navigate(`/products/${product.id}/paymentmethod`)}>
+                    <button className="w-full bg-blue-800 text-white py-3 rounded-full font-semibold my-4"
+                        onClick={() =>
+                            navigate(`/products/${product.id}/paymentmethod`, {
+                                state: {
+                                    product,
+                                    selectedSize: selectedSize || product.dataSizes[0],
+                                    selectedDay: selectedDay || product.days[0],
+                                    name,
+                                    email,
+                                    whatsapp,
+                                },
+                            })
+                        }
+                    >
                         Lanjutkan
                     </button>
                 </div>

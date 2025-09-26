@@ -45,14 +45,13 @@ export default function InvoicePage() {
                     title="Invoice"
                     showStepper={true}
                     steps={["Checkout", "Invoice"]}
-                    currentStep={1}
+                    currentStep={3}
                 />
             </div>
 
             <div className="fixed bottom-0 left-0 right-0 bg-white rounded-t-4xl h-[90vh] flex flex-col">
                 <ScrollArea className="flex-1 text-gray-700 overflow-y-auto">
                     <div className="px-4 py-6">
-
                         <div className="text-center">
                             <div className="flex justify-center mb-4">
                                 <CheckCircle2 className="w-16 h-16 text-green-500" />
@@ -60,7 +59,7 @@ export default function InvoicePage() {
                             <h1 className="text-2xl font-bold text-primary">
                                 Rp{total.toLocaleString("id-ID")}
                             </h1>
-                            <div className="flex items-center justify-center gap-2 w-full">
+                            <div className="flex items-center justify-center gap-2 mt-1">
                                 <p className="text-sm text-gray-500">{invoiceNumber}</p>
                                 <button
                                     onClick={handleCopy}
