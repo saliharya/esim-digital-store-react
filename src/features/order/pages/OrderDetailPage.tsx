@@ -1,23 +1,20 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import Header from "@/components/product/Header";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { getProductById } from "@/services/product/productService";
 
-const products = [
-    {
-        id: 1,
-        name: "eSIM Singapore",
-        coverage: "Singapore",
-        dataSizes: ["3GB", "5GB", "10GB", "15GB"],
-        days: [7, 14, 24, 30],
-    },
-];
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+}
 
 export default function OrderDetailPage() {
     const navigate = useNavigate();
+    const query = useQuery();
+    const selectedSize = query.get("size");
+    const selectedDay = query.get("days");
     const { id } = useParams();
-    const product = products.find((p) => p.id === Number(id));
-
+    const product = getProductById(Number(id));
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [whatsapp, setWhatsapp] = useState("");
@@ -50,7 +47,7 @@ export default function OrderDetailPage() {
                             </div>
                             <div className="flex justify-between">
                                 <span>Data Tersedia</span>
-                                <span>{product.dataSizes[0]}</span>
+                                <span>{selectedSize || product.dataSizes[0]}</span>
                             </div>
                             <div className="flex justify-between">
                                 <span>Tanggal Pesanan</span>
@@ -73,7 +70,7 @@ export default function OrderDetailPage() {
                                 placeholder="Masukan Nama Pelanggan"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none"
                             />
                         </div>
 
@@ -86,7 +83,7 @@ export default function OrderDetailPage() {
                                 placeholder="Masukan Email Pelanggan"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none"
                             />
                         </div>
 
@@ -99,7 +96,7 @@ export default function OrderDetailPage() {
                                 placeholder="Masukan Nomor HP Pelanggan"
                                 value={whatsapp}
                                 onChange={(e) => setWhatsapp(e.target.value)}
-                                className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none"
                             />
                             <p className="text-xs mt-1">
                                 Jika terjadi kendala, kami akan menghubungi ke nomor ini

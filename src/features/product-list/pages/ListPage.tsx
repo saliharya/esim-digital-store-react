@@ -5,6 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Sheet } from "react-modal-sheet";
+import { getProducts } from "@/services/product/productService";
 
 function BottomSheetSelect({
     label,
@@ -78,31 +79,17 @@ function BottomSheetSelect({
 }
 
 export default function ListPage() {
+
+    const products = getProducts();
+
     const [region, setRegion] = useState<string | null>(null);
     const [jenis, setJenis] = useState<string | null>(null);
 
-    const products = [
-        {
-            id: 1,
-            name: "eSIM Singapore",
-            images: ["src/assets/image.png"],
-            region: "Region Asia",
-            category: "Instant",
-            iconCategory:
-                "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
-            price: 52000,
-        },
-        {
-            id: 2,
-            name: "eSIM Indonesia",
-            images: ["src/assets/image.png"],
-            region: "Region Asia",
-            category: "Topupable",
-            iconCategory:
-                "https://cdn-icons-png.flaticon.com/512/1828/1828859.png",
-            price: 69000,
-        },
-    ];
+    const filteredProducts = products.filter((p) => {
+        const matchRegion = region ? p.region === region : true;
+        const matchJenis = jenis ? p.category === jenis : true;
+        return matchRegion && matchJenis;
+    });
 
     return (
         <div className="flex flex-col h-screen">
@@ -118,7 +105,7 @@ export default function ListPage() {
                 <div className="flex justify-between gap-2">
                     <BottomSheetSelect
                         label="Semua Region"
-                        options={["Asia", "Eropa", "Amerika"]}
+                        options={["Asia", "Eropa", "Oseania", "Amerika", "Afrika"]}
                         value={region}
                         onChange={setRegion}
                     />
@@ -133,21 +120,27 @@ export default function ListPage() {
             </div>
 
             <ScrollArea className="flex-1 px-3 bg-white rounded-t-4xl overflow-y-auto">
-                <div className="grid grid-cols-2 gap-2 py-4">
-                    {products.map((p) => (
-                        <Link key={p.id} to={`/products/${p.id}`}>
-                            <ItemCard
-                                image={p.images[0]}
-                                iconCategory={p.iconCategory}
-                                name={p.name}
-                                region={p.region}
-                                category={p.category}
-                                price={p.price}
-                            />
-                        </Link>
-                    ))}
-                </div>
+                {filteredProducts.length === 0 ? (
+                    <div className="py-8 text-center text-gray-500">
+                        No data available
+                    </div>
+                ) : (
+                    <div className="grid grid-cols-2 gap-2 py-4">
+                        {filteredProducts.map((p) => (
+                            <Link key={p.id} to={`/products/${p.id}`}>
+                                <ItemCard
+                                    image={p.images[0]}
+                                    name={p.name}
+                                    region={p.region}
+                                    category={p.category}
+                                    price={p.price}
+                                />
+                            </Link>
+                        ))}
+                    </div>
+                )}
             </ScrollArea>
+
         </div>
     );
 }

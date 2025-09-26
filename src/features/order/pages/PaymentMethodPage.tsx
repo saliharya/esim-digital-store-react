@@ -3,24 +3,14 @@ import { useState } from "react";
 import Header from "@/components/product/Header";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import PaymentMethods from "@/components/order/PaymentMethods";
+import { getProductById } from "@/services/product/productService";
 
 type PaymentMethod = "saldo" | "bca" | "mandiri" | "bri";
-
-// Dummy data
-const products = [
-    {
-        id: 1,
-        name: "eSIM Singapore",
-        coverage: "Singapore",
-        dataSizes: ["3GB", "5GB", "10GB", "15GB"],
-        days: [7, 14, 24, 30],
-    },
-];
 
 export default function PaymentMethodPage() {
     const navigate = useNavigate();
     const { id } = useParams();
-    const product = products.find((p) => p.id === Number(id));
+    const product = getProductById(Number(id));
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -32,6 +22,20 @@ export default function PaymentMethodPage() {
     if (!product) {
         return <div className="p-4">Produk tidak ditemukan</div>;
     }
+
+    const handleCheckout = () => {
+        navigate(`/checkout/${product.id}/invoice`, {
+            state: {
+                product,
+                selectedSize: product.dataSizes[0],
+                selectedDay: product.days[0],
+                name,
+                email,
+                whatsapp,
+                paymentMethod,
+            },
+        });
+    };
 
     return (
         <div className="flex flex-col h-screen bg-primary">
@@ -93,7 +97,7 @@ export default function PaymentMethodPage() {
                 </div>
 
                 <div className="px-4 py-3 border-t">
-                    <button className="w-full bg-blue-800 text-white py-3 rounded-full font-semibold my-4" onClick={() => navigate(`/checkout/${product.id}/invoice`)}>
+                    <button className="w-full bg-blue-800 text-white py-3 rounded-full font-semibold my-4" onClick={handleCheckout}>
                         Lanjutkan
                     </button>
                 </div>

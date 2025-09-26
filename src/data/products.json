@@ -1,0 +1,731 @@
+[
+    {
+        "id": 1,
+        "name": "eSIM Singapore",
+        "images": [
+            "https://picsum.photos/id/1018/600/400",
+            "https://picsum.photos/id/1015/600/400",
+            "https://picsum.photos/id/1019/600/400"
+        ],
+        "region": "Asia",
+        "category": "Topupable",
+        "price": 52000,
+        "coverage": "Singapore",
+        "dataSizes": [
+            "3GB",
+            "5GB",
+            "10GB",
+            "15GB"
+        ],
+        "days": [
+            7,
+            14,
+            24,
+            30
+        ],
+        "description": [
+            "SIM/eSIM dengan koneksi cepat hingga 4G.",
+            "SIM tersedia dalam tiga ukuran; eSIM dilengkapi kode QR dan petunjuk pemasangan.",
+            "Terhubung ke operator terbaik untuk cakupan dan kecepatan optimal.",
+            "Masa berlaku data dimulai saat pertama kali digunakan.",
+            "Paket mulai dari 500MB/hari hingga 30GB/bulan."
+        ]
+    },
+    {
+        "id": 2,
+        "name": "eSIM Indonesia",
+        "images": [
+            "https://picsum.photos/id/1020/600/400"
+        ],
+        "region": "Asia",
+        "category": "Instant",
+        "price": 69000,
+        "coverage": "Indonesia",
+        "dataSizes": [
+            "1GB",
+            "3GB",
+            "5GB",
+            "10GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "Data eSIM Indonesia dengan koneksi cepat."
+        ]
+    },
+    {
+        "id": 3,
+        "name": "eSIM Malaysia",
+        "images": [
+            "https://picsum.photos/id/1021/600/400"
+        ],
+        "region": "Asia",
+        "category": "Topupable",
+        "price": 58000,
+        "coverage": "Malaysia",
+        "dataSizes": [
+            "2GB",
+            "5GB",
+            "10GB"
+        ],
+        "days": [
+            7,
+            14,
+            21
+        ],
+        "description": [
+            "eSIM dengan koneksi stabil di Malaysia."
+        ]
+    },
+    {
+        "id": 4,
+        "name": "eSIM Thailand",
+        "images": [
+            "https://picsum.photos/id/1022/600/400"
+        ],
+        "region": "Asia",
+        "category": "Instant",
+        "price": 61000,
+        "coverage": "Thailand",
+        "dataSizes": [
+            "3GB",
+            "6GB",
+            "12GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "Koneksi data cepat dan mudah dipasang."
+        ]
+    },
+    {
+        "id": 5,
+        "name": "eSIM Vietnam",
+        "images": [
+            "https://picsum.photos/id/1023/600/400"
+        ],
+        "region": "Asia",
+        "category": "Topupable",
+        "price": 54000,
+        "coverage": "Vietnam",
+        "dataSizes": [
+            "1GB",
+            "5GB",
+            "10GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM untuk perjalanan singkat ke Vietnam."
+        ]
+    },
+    {
+        "id": 6,
+        "name": "eSIM Japan",
+        "images": [
+            "https://picsum.photos/id/1024/600/400"
+        ],
+        "region": "Asia",
+        "category": "Instant",
+        "price": 98000,
+        "coverage": "Japan",
+        "dataSizes": [
+            "5GB",
+            "10GB",
+            "20GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM untuk traveler ke Jepang dengan kecepatan tinggi."
+        ]
+    },
+    {
+        "id": 7,
+        "name": "eSIM Korea",
+        "images": [
+            "https://picsum.photos/id/1025/600/400"
+        ],
+        "region": "Asia",
+        "category": "Topupable",
+        "price": 87000,
+        "coverage": "Korea Selatan",
+        "dataSizes": [
+            "3GB",
+            "6GB",
+            "12GB"
+        ],
+        "days": [
+            7,
+            14,
+            21
+        ],
+        "description": [
+            "eSIM untuk Korea Selatan dengan sinyal stabil."
+        ]
+    },
+    {
+        "id": 8,
+        "name": "eSIM USA",
+        "images": [
+            "https://picsum.photos/id/1026/600/400"
+        ],
+        "region": "Amerika",
+        "category": "Instant",
+        "price": 120000,
+        "coverage": "USA",
+        "dataSizes": [
+            "5GB",
+            "10GB",
+            "20GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "Data eSIM Amerika dengan jaringan 4G/5G."
+        ]
+    },
+    {
+        "id": 9,
+        "name": "eSIM Canada",
+        "images": [
+            "https://picsum.photos/id/1027/600/400"
+        ],
+        "region": "Amerika",
+        "category": "Topupable",
+        "price": 115000,
+        "coverage": "Canada",
+        "dataSizes": [
+            "5GB",
+            "10GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM untuk perjalanan ke Kanada."
+        ]
+    },
+    {
+        "id": 10,
+        "name": "eSIM UK",
+        "images": [
+            "https://picsum.photos/id/1028/600/400"
+        ],
+        "region": "Eropa",
+        "category": "Instant",
+        "price": 110000,
+        "coverage": "United Kingdom",
+        "dataSizes": [
+            "3GB",
+            "5GB",
+            "10GB",
+            "15GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM UK untuk traveler Eropa."
+        ]
+    },
+    {
+        "id": 11,
+        "name": "eSIM Germany",
+        "images": [
+            "https://picsum.photos/id/1029/600/400"
+        ],
+        "region": "Eropa",
+        "category": "Topupable",
+        "price": 108000,
+        "coverage": "Germany",
+        "dataSizes": [
+            "5GB",
+            "10GB",
+            "20GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM untuk Jerman dengan koneksi stabil."
+        ]
+    },
+    {
+        "id": 12,
+        "name": "eSIM France",
+        "images": [
+            "https://picsum.photos/id/1030/600/400"
+        ],
+        "region": "Eropa",
+        "category": "Instant",
+        "price": 105000,
+        "coverage": "France",
+        "dataSizes": [
+            "3GB",
+            "6GB",
+            "12GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM untuk perjalanan di Prancis."
+        ]
+    },
+    {
+        "id": 13,
+        "name": "eSIM Italy",
+        "images": [
+            "https://picsum.photos/id/1031/600/400"
+        ],
+        "region": "Eropa",
+        "category": "Topupable",
+        "price": 107000,
+        "coverage": "Italy",
+        "dataSizes": [
+            "2GB",
+            "5GB",
+            "10GB"
+        ],
+        "days": [
+            7,
+            14,
+            21
+        ],
+        "description": [
+            "eSIM untuk traveler ke Italia."
+        ]
+    },
+    {
+        "id": 14,
+        "name": "eSIM Spain",
+        "images": [
+            "https://picsum.photos/id/1032/600/400"
+        ],
+        "region": "Eropa",
+        "category": "Instant",
+        "price": 103000,
+        "coverage": "Spain",
+        "dataSizes": [
+            "3GB",
+            "5GB",
+            "10GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM untuk perjalanan di Spanyol."
+        ]
+    },
+    {
+        "id": 15,
+        "name": "eSIM Netherlands",
+        "images": [
+            "https://picsum.photos/id/1033/600/400"
+        ],
+        "region": "Eropa",
+        "category": "Topupable",
+        "price": 102000,
+        "coverage": "Netherlands",
+        "dataSizes": [
+            "5GB",
+            "10GB",
+            "15GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM Belanda dengan koneksi cepat."
+        ]
+    },
+    {
+        "id": 16,
+        "name": "eSIM Brazil",
+        "images": [
+            "https://picsum.photos/id/1034/600/400"
+        ],
+        "region": "Amerika",
+        "category": "Instant",
+        "price": 95000,
+        "coverage": "Brazil",
+        "dataSizes": [
+            "3GB",
+            "6GB",
+            "12GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM untuk Brazil dengan jaringan cepat."
+        ]
+    },
+    {
+        "id": 17,
+        "name": "eSIM Argentina",
+        "images": [
+            "https://picsum.photos/id/1035/600/400"
+        ],
+        "region": "Amerika",
+        "category": "Topupable",
+        "price": 90000,
+        "coverage": "Argentina",
+        "dataSizes": [
+            "2GB",
+            "5GB",
+            "10GB"
+        ],
+        "days": [
+            7,
+            14,
+            21
+        ],
+        "description": [
+            "eSIM Argentina untuk perjalanan singkat."
+        ]
+    },
+    {
+        "id": 18,
+        "name": "eSIM Chile",
+        "images": [
+            "https://picsum.photos/id/1036/600/400"
+        ],
+        "region": "Amerika",
+        "category": "Instant",
+        "price": 88000,
+        "coverage": "Chile",
+        "dataSizes": [
+            "3GB",
+            "5GB",
+            "10GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM untuk Chile dengan jaringan stabil."
+        ]
+    },
+    {
+        "id": 19,
+        "name": "eSIM Mexico",
+        "images": [
+            "https://picsum.photos/id/1037/600/400"
+        ],
+        "region": "Amerika",
+        "category": "Topupable",
+        "price": 87000,
+        "coverage": "Mexico",
+        "dataSizes": [
+            "5GB",
+            "10GB",
+            "15GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM Mexico untuk traveler."
+        ]
+    },
+    {
+        "id": 20,
+        "name": "eSIM Peru",
+        "images": [
+            "https://picsum.photos/id/1038/600/400"
+        ],
+        "region": "Amerika",
+        "category": "Instant",
+        "price": 86000,
+        "coverage": "Peru",
+        "dataSizes": [
+            "3GB",
+            "6GB",
+            "12GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM Peru untuk perjalanan singkat."
+        ]
+    },
+    {
+        "id": 21,
+        "name": "eSIM Australia",
+        "images": [
+            "https://picsum.photos/id/1039/600/400"
+        ],
+        "region": "Oceania",
+        "category": "Topupable",
+        "price": 99000,
+        "coverage": "Australia",
+        "dataSizes": [
+            "5GB",
+            "10GB",
+            "20GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM untuk Australia dengan sinyal cepat."
+        ]
+    },
+    {
+        "id": 22,
+        "name": "eSIM New Zealand",
+        "images": [
+            "https://picsum.photos/id/1040/600/400"
+        ],
+        "region": "Oceania",
+        "category": "Instant",
+        "price": 97000,
+        "coverage": "New Zealand",
+        "dataSizes": [
+            "3GB",
+            "6GB",
+            "12GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM New Zealand untuk traveler Oceania."
+        ]
+    },
+    {
+        "id": 23,
+        "name": "eSIM Fiji",
+        "images": [
+            "https://picsum.photos/id/1041/600/400"
+        ],
+        "region": "Oceania",
+        "category": "Topupable",
+        "price": 95000,
+        "coverage": "Fiji",
+        "dataSizes": [
+            "2GB",
+            "5GB",
+            "10GB"
+        ],
+        "days": [
+            7,
+            14,
+            21
+        ],
+        "description": [
+            "eSIM Fiji untuk perjalanan singkat."
+        ]
+    },
+    {
+        "id": 24,
+        "name": "eSIM Papua New Guinea",
+        "images": [
+            "https://picsum.photos/id/1042/600/400"
+        ],
+        "region": "Oceania",
+        "category": "Instant",
+        "price": 94000,
+        "coverage": "Papua New Guinea",
+        "dataSizes": [
+            "3GB",
+            "5GB",
+            "10GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM Papua New Guinea dengan koneksi stabil."
+        ]
+    },
+    {
+        "id": 25,
+        "name": "eSIM Russia",
+        "images": [
+            "https://picsum.photos/id/1043/600/400"
+        ],
+        "region": "Eropa/Asia",
+        "category": "Topupable",
+        "price": 108000,
+        "coverage": "Russia",
+        "dataSizes": [
+            "5GB",
+            "10GB",
+            "15GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM Rusia untuk perjalanan panjang."
+        ]
+    },
+    {
+        "id": 26,
+        "name": "eSIM China",
+        "images": [
+            "https://picsum.photos/id/1044/600/400"
+        ],
+        "region": "Asia",
+        "category": "Instant",
+        "price": 89000,
+        "coverage": "China",
+        "dataSizes": [
+            "3GB",
+            "6GB",
+            "12GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM China dengan jaringan cepat."
+        ]
+    },
+    {
+        "id": 27,
+        "name": "eSIM India",
+        "images": [
+            "https://picsum.photos/id/1045/600/400"
+        ],
+        "region": "Asia",
+        "category": "Topupable",
+        "price": 78000,
+        "coverage": "India",
+        "dataSizes": [
+            "1GB",
+            "5GB",
+            "10GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM India untuk perjalanan singkat."
+        ]
+    },
+    {
+        "id": 28,
+        "name": "eSIM UAE",
+        "images": [
+            "https://picsum.photos/id/1046/600/400"
+        ],
+        "region": "Timur Tengah",
+        "category": "Instant",
+        "price": 95000,
+        "coverage": "UAE",
+        "dataSizes": [
+            "3GB",
+            "5GB",
+            "10GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM UAE untuk koneksi stabil di Timur Tengah."
+        ]
+    },
+    {
+        "id": 29,
+        "name": "eSIM Saudi Arabia",
+        "images": [
+            "https://picsum.photos/id/1047/600/400"
+        ],
+        "region": "Timur Tengah",
+        "category": "Topupable",
+        "price": 94000,
+        "coverage": "Saudi Arabia",
+        "dataSizes": [
+            "2GB",
+            "5GB",
+            "10GB"
+        ],
+        "days": [
+            7,
+            14,
+            21
+        ],
+        "description": [
+            "eSIM Saudi Arabia untuk perjalanan bisnis."
+        ]
+    },
+    {
+        "id": 30,
+        "name": "eSIM Qatar",
+        "images": [
+            "https://picsum.photos/id/1048/600/400"
+        ],
+        "region": "Timur Tengah",
+        "category": "Instant",
+        "price": 93000,
+        "coverage": "Qatar",
+        "dataSizes": [
+            "3GB",
+            "6GB",
+            "12GB"
+        ],
+        "days": [
+            7,
+            14,
+            30
+        ],
+        "description": [
+            "eSIM Qatar untuk koneksi cepat di Timur Tengah."
+        ]
+    }
+]

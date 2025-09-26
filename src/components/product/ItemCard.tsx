@@ -1,3 +1,4 @@
+import { Wallet, Zap } from "lucide-react";
 import React from "react";
 
 interface ItemCardProps {
@@ -5,7 +6,6 @@ interface ItemCardProps {
     image: string;
     region: string;
     category: string;
-    iconCategory: string;
     price: number;
 }
 
@@ -14,7 +14,6 @@ const ItemCard: React.FC<ItemCardProps> = ({
     image,
     region,
     category,
-    iconCategory,
     price,
 }) => {
     return (
@@ -23,9 +22,10 @@ const ItemCard: React.FC<ItemCardProps> = ({
             <div className="pl-2">
                 <p className="font-bold pt-4 text-slate-900">{name}</p>
                 <p className="text-neutral-400 text-sm pt-2 font-light">{region}</p>
-                <div className="flex items-center pt-2 gap-2">
-                    <img src={iconCategory} className="w-4 h-4 object-cover" />
-                    <p className="font-medium text-slate-900">{category}</p>
+                <div className="flex items-center gap-2 pt-2">
+                    {category === "Instant" && <Zap className="w-4 h-4 text-yellow-500" />}
+                    {category === "Topupable" && <Wallet className="w-4 h-4 text-green-500" />}
+                    <p className="font-bold text-slate-700">{category}</p>
                 </div>
                 <p className="text-blue-900 font-bold pt-2">Rp{price.toLocaleString()}</p>
             </div>
