@@ -2,6 +2,8 @@ import AppLayout from '@/layouts/AppLayout';
 import ListPage from '../features/product-list/pages/ListPage';
 import './App.css'
 import { createBrowserRouter } from 'react-router-dom';
+import DetailPage from '@/features/product-list/pages/DetailPage';
+import OrderDetailPage from '@/features/order/pages/OrderDetailPage';
 
 export const router = createBrowserRouter([
   {
@@ -13,8 +15,12 @@ export const router = createBrowserRouter([
 
     ),
   },
-  // {
-  //   path: "/detail/:id",
-  //   element: <ProductDetailPage />,
-  // },
+  {
+    path: "/products/:id",
+    element: <DetailPage />,
+  },
+  {
+    path: "/products/:id/order",
+    element: <OrderDetailPage />,
+  },
 ]);

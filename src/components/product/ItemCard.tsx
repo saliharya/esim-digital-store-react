@@ -2,7 +2,7 @@ import React from "react";
 
 interface ItemCardProps {
     name: string;
-    imgUrl: string;
+    image: string;
     region: string;
     category: string;
     iconCategory: string;
@@ -11,7 +11,7 @@ interface ItemCardProps {
 
 const ItemCard: React.FC<ItemCardProps> = ({
     name,
-    imgUrl,
+    image,
     region,
     category,
     iconCategory,
@@ -19,7 +19,7 @@ const ItemCard: React.FC<ItemCardProps> = ({
 }) => {
     return (
         <div className="p-2 w-fit rounded-xl shadow-md pb-8">
-            <img src={imgUrl} className="rounded-xl w-44 h-48 object-cover" />
+            <img src={image} className="rounded-xl w-44 h-48 object-cover" />
             <div className="pl-2">
                 <p className="font-bold pt-4 text-slate-900">{name}</p>
                 <p className="text-neutral-400 text-sm pt-2 font-light">{region}</p>
