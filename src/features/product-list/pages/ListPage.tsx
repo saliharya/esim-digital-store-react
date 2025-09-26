@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Sheet } from "react-modal-sheet";
 
-// ✅ Reusable BottomSheetSelect
 function BottomSheetSelect({
     label,
     options,
@@ -109,7 +108,7 @@ export default function ListPage() {
         <div className="flex flex-col h-screen">
             <div className="py-8 px-4 space-y-4 text-white bg-primary">
                 <div className="pt-4">
-                    <Header />
+                    <Header title="Travel eSIM" />
                 </div>
 
                 <div className="pt-4">

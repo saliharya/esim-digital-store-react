@@ -36,7 +36,12 @@ export default function PaymentMethodPage() {
     return (
         <div className="flex flex-col h-screen bg-primary">
             <div className="pt-8 text-white px-4">
-                <Header />
+                <Header
+                    title="Metode Pembayaran"
+                    showStepper={true}
+                    steps={["Checkout", "Invoice"]}
+                    currentStep={1}
+                />
             </div>
 
             <div className="fixed bottom-0 left-0 right-0 bg-white rounded-t-4xl h-[90vh] flex flex-col">
@@ -88,7 +93,7 @@ export default function PaymentMethodPage() {
                 </div>
 
                 <div className="px-4 py-3 border-t">
-                    <button className="w-full bg-blue-800 text-white py-3 rounded-full font-semibold my-4">
+                    <button className="w-full bg-blue-800 text-white py-3 rounded-full font-semibold my-4" onClick={() => navigate(`/checkout/${product.id}/invoice`)}>
                         Lanjutkan
                     </button>
                 </div>
