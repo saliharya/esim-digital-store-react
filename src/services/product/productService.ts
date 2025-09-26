@@ -1,4 +1,4 @@
-import productsJson from "@/data/products.json";
+import productsJson from "@/../public/data/products.json"
 import type { Product } from "./product";
 
 export function getProducts(): Product[] {

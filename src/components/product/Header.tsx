@@ -1,6 +1,6 @@
 import { ArrowLeft } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Stepper from "../Stepper";
+import Stepper from "../ui/Stepper";
 
 interface HeaderProps {
     title: string;
