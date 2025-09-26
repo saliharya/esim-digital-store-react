@@ -17,6 +17,8 @@ export default function PaymentMethodPage() {
         name,
         email,
         whatsapp,
+        price,
+        transactionFee,
     } = state || {};
 
     const [paymentMethod, setPaymentMethod] =
@@ -36,6 +38,8 @@ export default function PaymentMethodPage() {
                 email,
                 whatsapp,
                 paymentMethod,
+                price,
+                transactionFee
             },
         });
     };

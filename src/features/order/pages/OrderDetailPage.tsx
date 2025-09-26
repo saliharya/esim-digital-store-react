@@ -116,6 +116,8 @@ export default function OrderDetailPage() {
                                     name,
                                     email,
                                     whatsapp,
+                                    price: product.price,
+                                    transactionFee: 2500,
                                 },
                             })
                         }

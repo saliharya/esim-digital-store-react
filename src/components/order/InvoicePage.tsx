@@ -18,8 +18,8 @@ export default function InvoicePage() {
         email,
         whatsapp,
         paymentMethod,
-        price = 500000,
-        transactionFee = 2500,
+        price,
+        transactionFee,
     } = state || {};
 
     const handleCopy = () => {
